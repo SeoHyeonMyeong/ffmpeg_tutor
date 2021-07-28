@@ -1,6 +1,11 @@
 # ffmpeg_tutor
 just tutorial for use ffmpeg, ffserver
 
+## ffmpeg test on ubuntu
+```shell
+$ ffmpeg -ss 3 -i /dev/video0 -y -an -s 640x480 test.jpg
+```
+
 ## use ffmpeg
 ```shell
 $ ffmpeg -f v4l2 -s 640x480 -r 10 -i /dev/video0 result.avi
@@ -13,9 +18,9 @@ $ ffmpeg -f v4l2 -s 640x480 -r 10 -i /dev/video0 result.avi
 ## use ffserver
 ```shell
 $ ffserver -f ffserver.conf
+$ ffmpeg -f v4l2 -s 640x480 -r 10 -i /dev/video0 http://localhost:8090/feed1.ffm
 ```
 * __-f__ [file] : ffserver.conf file path
-
 
 ## ffserver configure
 ```
